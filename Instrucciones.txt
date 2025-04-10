@@ -1,0 +1,50 @@
+consolesearch
+
+hotelModel.cs (no usado)
+Program.cs
+
+Configurar y probar azure ai search
+Crear índice
+Subir documento
+Hacer búsquedas
+
+Llama a chatcommun-AzureAISearchClass para ejecutar los métodos anteriores
+
+ChatCommun
+
+AzureAISearchClass.cs
+Métodos para crear índice, subir documento y buscar en el doc
+Al crear índice se debe dar la configuración (la toma de hotelModel.cs)
+Dar url del índice, llaves, y el nombre del índice a crear
+
+HotelModel.cs
+Archivo de configuración del índice, o se puede crear manualmente desde azure
+
+Tools
+Método recogeArch, para extraer los datos de un archivo de texto parse, para subir documento por batches
+
+OpenAIClass
+clase para hacer consultas a chatgpt, dar uri, llaves y nombre de despliegue (se obtiene al crear)
+
+ClienteOpenAI
+Program.cs
+Para hacer consultas y añadir fuente de datos,  dar uri, llaves y nombre de despliegue (se obtiene al crear)
+
+OpenRagTest
+Program.cs
+Ejemplo de app con autenticador
+
+Se debe crear primero el índice:
+desde Azure, crear cuenta de almacenamiento (pide crear resource-group) -> crear un contendor
+Desde CLI
+az search service créate --name nombre --resource-group group --location "East US" --sku free --partition-count 1 --replica-count 1
+De overview copiar url, de seguridad copiar las llaves de admin y lectura
+Añadir modelo 
+Azure OpenAI o AI Foundry para otros modelos
+Lanzar, crear nuevo proyecto, elegir modelo del catalogo, desplegar y abrir playground
+Desde aquí se puede proporcionar ventana de contexto, mandar prompts y añadir origen de los datos (conectar con azure search)
+O descargar código, se debe copiar el target uri y la llave
+
+
+
+
